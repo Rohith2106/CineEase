@@ -5,6 +5,7 @@ import userRouter from "./routes/user-routes.js";
 dotenv.config();
 const app = express();
 
+app.use(express.json());
 app.use("/user" , userRouter);
 
 mongoose.connect(`mongodb+srv://rohith0621:${process.env.MONGODB_PASSWORD}@cluster0.rwspy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
