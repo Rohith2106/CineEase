@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const bookingSchema = new mongoose.Schema({
   movie: {
     type: String /*mongoose.Types.ObjectId*/,
-    ref: "Movie",
+    //ref: "Movie",
     required: true,
   },
   date: {
