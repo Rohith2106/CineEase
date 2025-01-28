@@ -51,15 +51,16 @@ export const addMovie = async (req, res, next) => {
         title,
       });
 
-      /*const session = await mongoose.startSession();
+      const session = await mongoose.startSession();
       const adminUser = await Admin.findById(adminId);
       session.startTransaction();
       await movie.save({ session });
+
       adminUser.addedMovies.push(movie);
       await adminUser.save({ session });
-      await session.commitTransaction();*/
+      await session.commitTransaction();
 
-      movie = await movie.save();
+      //movie = await movie.save();
 
     } catch (err) {
       return console.log(err);
